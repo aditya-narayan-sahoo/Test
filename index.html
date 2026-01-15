@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aditya Narayan Sahoo | Portfolio</title>
     <meta name="description" content="Portfolio of Aditya Narayan Sahoo - Full Stack Developer & UI/UX Enthusiast">
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700&display=swap"
+        rel="stylesheet">
+
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <!-- Navigation -->
@@ -40,12 +44,14 @@
         <section id="home" class="hero">
             <div class="blob blob-1"></div>
             <div class="blob blob-2"></div>
-            
+
             <div class="container">
                 <div class="hero-content">
                     <h4>Hello, I'm</h4>
                     <h1>Aditya Narayan Sahoo</h1>
-                    <p class="role" style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--accent-primary);">Software Engineer</p>
+                    <p class="role"
+                        style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--accent-primary); min-height: 1.5em;">
+                        <span id="dynamic-role">Associate Systems Engineer</span><span class="cursor">|</span></p>
                     <p>Building scalable, user-centric interfaces and robust automation solutions. UI/UX Enthusiast.</p>
                     <div class="hero-buttons">
                         <a href="#projects" class="btn btn-primary">View My Work</a>
@@ -61,13 +67,20 @@
                 <h2>About Me</h2>
                 <div class="glass" style="padding: 2rem; border-radius: 16px; margin-top: 2rem;">
                     <p>
-                        I am a Computer Science Engineering graduate from <strong>Siksha O Anusandhan University</strong> with a GPA of 8.41. 
-                        My journey bridges the gap between complex backend logic and intuitive frontend design.
+                        I have developed a well-rounded skill set across both software development and data engineering
+                        support. My early experience focused on building responsive frontend applications and optimizing
+                        backend systems for complex domains such as vehicle infotainment, navigation telematics, and
+                        ADAS. I contributed to system integration and automation initiatives that enhanced user
+                        experience and system efficiency, while also working on cloud-based solutions and database
+                        synchronization between in-vehicle and cloud environments.
                     </p>
                     <p>
-                        With a strong foundation in <strong>Physics, Chemistry, and Math</strong> from ODM Public School, 
-                        I thrive on solving difficult problems, whether it's optimizing in-vehicle infotainment systems 
-                        or building Generative AI-powered web apps.
+                        Building on this technical foundation, I later transitioned into supporting large-scale data
+                        engineering workflows in cloud environments. My work involved monitoring, maintaining, and
+                        troubleshooting ETL pipelines using Matillion, ensuring reliable data ingestion into cloud data
+                        warehouses like Snowflake. This blend of development and data operations experience has equipped
+                        me with a strong understanding of both application and data pipeline lifecycles in modern cloud
+                        ecosystems.
                     </p>
                 </div>
             </div>
@@ -78,7 +91,29 @@
             <div class="container">
                 <h2>Experience</h2>
                 <div style="margin-top: 2rem;">
-                    
+
+                    <div class="experience-card">
+                        <div class="exp-header">
+                            <div>
+                                <h3>Associate Systems Engineer</h3>
+                                <div class="company">IBM India Pvt. Ltd.</div>
+                            </div>
+                            <div class="duration">Feb 2024 - Present</div>
+                        </div>
+                        <ul class="exp-details">
+                            <li><strong>ETL & Data Pipelines:</strong> Monitored, maintained, and troubleshooted ETL
+                                workflows using Matillion, ensuring smooth execution of daily data pipelines integrating
+                                data into cost-effective cloud data warehouses like Snowflake.</li>
+                            <li><strong>Incident Management:</strong> Handled incident resolution, job failures, and
+                                performance issues, ensuring high data availability for reporting and analytics.</li>
+                            <li><strong>Optimization:</strong> Contributed to enhancements including parameterization
+                                and scheduling improvements, boosting pipeline efficiency and reliability.</li>
+                            <li><strong>Collaboration:</strong> Coordinated with cross-functional development teams to
+                                align on business priorities and support large-scale data integration projects across
+                                AWS cloud platforms.</li>
+                        </ul>
+                    </div>
+
                     <div class="experience-card">
                         <div class="exp-header">
                             <div>
@@ -88,12 +123,87 @@
                             <div class="duration">Dec 2023 - May 2024</div>
                         </div>
                         <ul class="exp-details">
-                            <li><strong>UI Integration:</strong> Designed and developed intuitive ReactJS interfaces for in-vehicle infotainment, navigation telematics, and ADAS, prioritizing driver safety and minimizing cognitive load.</li>
-                            <li><strong>Automation Solutions:</strong> Utilized advanced C++ multithreading to implement automation projects, resulting in a 1.3% reduction in manual intervention and 1.5% operational efficiency increase.</li>
-                            <li><strong>System Integration:</strong> Successfully integrated C++ and frontend modules, ensuring seamless vehicle dashboard functionality and enhancing system reliability by 6%.</li>
+                            <li><strong>UI Integration:</strong> Designed and developed intuitive ReactJS interfaces for
+                                in-vehicle infotainment, navigation telematics, and ADAS, prioritizing driver safety and
+                                minimizing cognitive load.</li>
+                            <li><strong>Automation Solutions:</strong> Utilized advanced C++ multithreading to implement
+                                automation projects, resulting in a 1.3% reduction in manual intervention and 1.5%
+                                operational efficiency increase.</li>
+                            <li><strong>System Integration:</strong> Successfully integrated C++ and frontend modules,
+                                ensuring seamless vehicle dashboard functionality and enhancing system reliability by
+                                6%.</li>
                         </ul>
                     </div>
 
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section-padding" style="background: rgba(255,255,255,0.01);">
+            <div class="container">
+                <h2>Education</h2>
+                <div style="margin-top: 2rem;">
+                    <div class="experience-card">
+                        <div class="exp-header">
+                            <div>
+                                <h3>B.Tech in Computer Science and Engineering</h3>
+                                <div class="company">Siksha O Anusandhan University, IN</div>
+                            </div>
+                            <div class="duration">2024</div>
+                        </div>
+                        <ul class="exp-details">
+                            <li>Institute of Technical Education and Research</li>
+                        </ul>
+                    </div>
+                    <div class="experience-card">
+                        <div class="exp-header">
+                            <div>
+                                <h3>Senior Secondary in Science</h3>
+                                <div class="company">ODM Public School, IN</div>
+                            </div>
+                            <div class="duration">2020</div>
+                        </div>
+                        <ul class="exp-details">
+                            <li>Physics, Chemistry, Mathematics</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="credentials" class="section-padding">
+            <div class="container">
+                <h2>Digital Credentials</h2>
+                <div class="glass" style="padding: 2rem; border-radius: 16px; margin-top: 2rem;">
+                    <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
+                        <li style="display: flex; align-items: center; gap: 0.5rem;"><span
+                                style="color: var(--accent-primary);">▹</span> IBM Generative AI Foundations - 2025</li>
+                        <li style="display: flex; align-items: center; gap: 0.5rem;"><span
+                                style="color: var(--accent-primary);">▹</span> IBM Delivery Central Platform Foundations
+                            - 2025</li>
+                        <li style="display: flex; align-items: center; gap: 0.5rem;"><span
+                                style="color: var(--accent-primary);">▹</span> Microsoft Certified: Azure Fundamentals -
+                            2025</li>
+                        <li style="display: flex; align-items: center; gap: 0.5rem;"><span
+                                style="color: var(--accent-primary);">▹</span> Consumer Products Industry Jumpstart -
+                            2025</li>
+                        <li style="display: flex; align-items: center; gap: 0.5rem;"><span
+                                style="color: var(--accent-primary);">▹</span> IBM Garage Essentials - 2025</li>
+                        <li style="display: flex; align-items: center; gap: 0.5rem;"><span
+                                style="color: var(--accent-primary);">▹</span> Enterprise Design Thinking Practitioner -
+                            2025</li>
+                        <li style="display: flex; align-items: center; gap: 0.5rem;"><span
+                                style="color: var(--accent-primary);">▹</span> IBM Agile Explorer - 2025</li>
+                        <li style="display: flex; align-items: center; gap: 0.5rem;"><span
+                                style="color: var(--accent-primary);">▹</span> IBM Consulting Way Habits - Foundational
+                            - 2025</li>
+                        <li style="display: flex; align-items: center; gap: 0.5rem;"><span
+                                style="color: var(--accent-primary);">▹</span> IBM watsonx Essentials - 2025</li>
+                        <li style="display: flex; align-items: center; gap: 0.5rem;"><span
+                                style="color: var(--accent-primary);">▹</span> IBM Cloud Essentials - 2025</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -103,18 +213,32 @@
             <div class="container">
                 <h2>Skills</h2>
                 <div class="skills-grid">
+                    <!-- Data Engineering & Cloud -->
+                    <div class="skill-item"
+                        style="grid-column: 1 / -1; text-align: left; background: transparent; border: none; padding: 0.5rem 0; font-family: var(--font-display); font-size: 1.2rem; color: var(--accent-primary);">
+                        Data Engineering & Cloud</div>
+                    <div class="skill-item">ETL (Matillion)</div>
+                    <div class="skill-item">Snowflake</div>
+                    <div class="skill-item">SQL / NoSQL</div>
+                    <div class="skill-item">AWS</div>
+                    <div class="skill-item">Data Warehousing</div>
+                    <div class="skill-item">CI/CD Pipelines</div>
+                    <div class="skill-item">Agile</div>
+                    <div class="skill-item">Performance Opt.</div>
+
+                    <!-- Programming & Development -->
+                    <div class="skill-item"
+                        style="grid-column: 1 / -1; text-align: left; background: transparent; border: none; padding: 0.5rem 0; margin-top: 1rem; font-family: var(--font-display); font-size: 1.2rem; color: var(--accent-primary);">
+                        Programming & Development</div>
                     <div class="skill-item">Java</div>
-                    <div class="skill-item">C++</div>
-                    <div class="skill-item">React.js</div>
-                    <div class="skill-item">Next.js</div>
-                    <div class="skill-item">TypeScript</div>
-                    <div class="skill-item">JavaScript</div>
-                    <div class="skill-item">SQL</div>
+                    <div class="skill-item">JavaScript (ES6+)</div>
+                    <div class="skill-item">ReactJS</div>
+                    <div class="skill-item">Node.js</div>
+                    <div class="skill-item">Express.js</div>
                     <div class="skill-item">MongoDB</div>
-                    <div class="skill-item">HTML5 & CSS</div>
-                    <div class="skill-item">Tailwind</div>
-                    <div class="skill-item">Redux</div>
-                    <div class="skill-item">Firebase</div>
+                    <div class="skill-item">HTML/CSS</div>
+                    <div class="skill-item">Microservices</div>
+                    <div class="skill-item">RESTful APIs</div>
                     <div class="skill-item">Git & GitHub</div>
                 </div>
             </div>
@@ -125,47 +249,62 @@
             <div class="container">
                 <h2>Featured Projects</h2>
                 <div class="projects-grid" style="margin-top: 2rem;">
-                    
+
                     <!-- Chatty -->
                     <article class="project-card glass">
-                        <div class="project-image" style="background: linear-gradient(45deg, #6366f1, #a855f7);"></div>
-                        <div class="project-content">
-                            <div class="tags">
-                                <span class="tag">MERN Stack</span>
-                                <span class="tag">Socket.io</span>
-                                <span class="tag">DaisyUI</span>
+                        <a href="https://github.com/aditya-narayan-sahoo/chat-app" target="_blank"
+                            style="display: block; height: 100%;">
+                            <div class="project-image" style="background: linear-gradient(45deg, #6366f1, #a855f7);">
                             </div>
-                            <h3>Chatty</h3>
-                            <p>Real-time messaging app with JWT security. Features online/offline tracking, profile customization, and global state management via Zustand.</p>
-                        </div>
+                            <div class="project-content">
+                                <div class="tags">
+                                    <span class="tag">MERN Stack</span>
+                                    <span class="tag">Socket.io</span>
+                                    <span class="tag">DaisyUI</span>
+                                </div>
+                                <h3>Chatty</h3>
+                                <p>Real-time messaging app with JWT security. Features online/offline tracking, profile
+                                    customization, and global state management via Zustand.</p>
+                            </div>
+                        </a>
                     </article>
 
                     <!-- Netflix GPT -->
                     <article class="project-card glass">
-                        <div class="project-image" style="background: linear-gradient(45deg, #e50914, #000000);"></div>
-                        <div class="project-content">
-                            <div class="tags">
-                                <span class="tag">React</span>
-                                <span class="tag">Gemini API</span>
-                                <span class="tag">Firebase</span>
+                        <a href="https://github.com/aditya-narayan-sahoo/netflix-gpt" target="_blank"
+                            style="display: block; height: 100%;">
+                            <div class="project-image" style="background: linear-gradient(45deg, #e50914, #000000);">
                             </div>
-                            <h3>Netflix GPT</h3>
-                            <p>Movie discovery platform powered by Gemini Flash API for tailored recommendations. Includes Redux based caching and secure authentication.</p>
-                        </div>
+                            <div class="project-content">
+                                <div class="tags">
+                                    <span class="tag">React</span>
+                                    <span class="tag">Gemini API</span>
+                                    <span class="tag">Firebase</span>
+                                </div>
+                                <h3>Netflix GPT</h3>
+                                <p>Movie discovery platform powered by Gemini Flash API for tailored recommendations.
+                                    Includes Redux based caching and secure authentication.</p>
+                            </div>
+                        </a>
                     </article>
 
                     <!-- Mock Food App -->
                     <article class="project-card glass">
-                        <div class="project-image" style="background: linear-gradient(45deg, #fc8019, #facc15);"></div>
-                        <div class="project-content">
-                            <div class="tags">
-                                <span class="tag">React</span>
-                                <span class="tag">Redux</span>
-                                <span class="tag">Swiggy API</span>
+                        <a href="https://github.com/aditya-narayan-sahoo/order-food" target="_blank"
+                            style="display: block; height: 100%;">
+                            <div class="project-image" style="background: linear-gradient(45deg, #fc8019, #facc15);">
                             </div>
-                            <h3>Mock Food App</h3>
-                            <p>Dynamic food delivery interface mimicking Swiggy. Features real-time restaurant data fetching, cart management, and search filtering.</p>
-                        </div>
+                            <div class="project-content">
+                                <div class="tags">
+                                    <span class="tag">React</span>
+                                    <span class="tag">Redux</span>
+                                    <span class="tag">Swiggy API</span>
+                                </div>
+                                <h3>Mock Food App</h3>
+                                <p>Dynamic food delivery interface mimicking Swiggy. Features real-time restaurant data
+                                    fetching, cart management, and search filtering.</p>
+                            </div>
+                        </a>
                     </article>
 
                 </div>
@@ -178,10 +317,11 @@
                 <div class="contact glass" style="padding: 3rem; border-radius: 24px;">
                     <h2>Get In Touch</h2>
                     <p>
-                        I'm currently looking for new opportunities, my inbox is always open. 
+                        I'm currently looking for new opportunities, my inbox is always open.
                         Whether you have a question or just want to say hi, I'll try my best to get back to you!
                     </p>
-                    <a href="mailto:adityasahoo246@gmail.com" class="btn btn-primary" style="margin-top: 1rem;">Say Hello</a>
+                    <a href="mailto:adityasahoo246@gmail.com" class="btn btn-primary" style="margin-top: 1rem;">Say
+                        Hello</a>
                 </div>
             </div>
         </section>
@@ -190,10 +330,12 @@
     <footer>
         <div class="container">
             <p>Designed & Built by Aditya Narayan Sahoo</p>
-            <p style="font-size: 0.8rem; margin-top: 0.5rem; color: var(--text-secondary);">© 2026 All rights reserved.</p>
+            <p style="font-size: 0.8rem; margin-top: 0.5rem; color: var(--text-secondary);">© 2026 All rights reserved.
+            </p>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>

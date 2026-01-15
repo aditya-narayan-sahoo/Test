@@ -55,4 +55,43 @@ document.addEventListener('DOMContentLoaded', () => {
             header.style.boxShadow = 'none';
         }
     });
+
+    // Dynamic Text Animation
+    const dynamicText = document.getElementById('dynamic-role');
+    if (dynamicText) {
+        const roles = ["Software Engineer", "Data Engineer", "Associate Systems Engineer"];
+        let roleIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typeSpeed = 100;
+
+        function type() {
+            const currentRole = roles[roleIndex];
+            
+            if (isDeleting) {
+                dynamicText.textContent = currentRole.substring(0, charIndex - 1);
+                charIndex--;
+                typeSpeed = 50; // Newer texts delete faster
+            } else {
+                dynamicText.textContent = currentRole.substring(0, charIndex + 1);
+                charIndex++;
+                typeSpeed = 100; // Normal typing speed
+            }
+
+            if (!isDeleting && charIndex === currentRole.length) {
+                // Determine pause at end of word
+                isDeleting = true;
+                typeSpeed = 2000;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+                typeSpeed = 500;
+            }
+
+            setTimeout(type, typeSpeed);
+        }
+
+        // Start animation
+        setTimeout(type, 1000);
+    }
 });

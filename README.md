@@ -8,9 +8,11 @@ A premium, responsive portfolio website designed for **Aditya Narayan Sahoo**, a
 - **Responsive Layout**: Fully responsive design that works seamlessly on desktop, tablet, and mobile.
 - **Experience Timeline**: Dedicated section highlighting professional experience (e.g., KPIT Technologies).
 - **Interactive Elements**:
+  - Dynamic role text animation (Associate Systems Engineer / Software Engineer / Data Engineer).
   - Mobile navigation toggle.
   - Reveal-on-scroll animations.
   - Hover effects on project cards and skills.
+- **Digital Credentials**: showcase of verified professional certifications.
 - **SEO Friendly**: Semantic HTML5 structure with optimized meta tags.
 
 ## 🛠️ Technologies Used
@@ -40,17 +42,20 @@ A premium, responsive portfolio website designed for **Aditya Narayan Sahoo**, a
 **Aditya Narayan Sahoo**
 
 - **Email**: [adityasahoo246@gmail.com](mailto:adityasahoo246@gmail.com)
-- **Role**: Software Engineer
-- **Focus**: Building scalable, user-centric interfaces and robust automation solutions.
+- **Role**: Associate Systems Engineer
+- **Focus**: Building scalable, user-centric interfaces, data pipelines (ETL), and robust automation solutions.
 
 ## 📄 Sections
 
-1.  **Hero**: Introduction and CTA.
-2.  **About**: Educational background and bio.
-3.  **Experience**: Internship details at KPIT Technologies.
-4.  **Skills**: Technical tech stack (Java, C++, React, etc.).
-5.  **Featured Projects**:
+
+1.  **Hero**: Introduction with dynamic role animation and CTA.
+2.  **About**: Professional profile and bio.
+3.  **Experience**: Professional timeline (IBM, KPIT Technologies).
+4.  **Education**: Academic background (B.Tech, Senior Secondary).
+5.  **Digital Credentials**: Verified IBM & Microsoft certifications.
+6.  **Skills**: Technical tech stack (Data Engineering, Cloud, Full Stack).
+7.  **Featured Projects**:
     - **Chatty**: Real-time MERN stack chat app.
     - **Netflix GPT**: AI-powered movie recommendations.
     - **Mock Food App**: Food delivery UI clone.
-6.  **Contact**: Email link.
+8.  **Contact**: [adityasahoo246@gmail.com](mailto:adityasahoo246@gmail.com)
