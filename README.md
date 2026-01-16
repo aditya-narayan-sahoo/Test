@@ -8,7 +8,7 @@ A premium, responsive portfolio website designed for **Aditya Narayan Sahoo**, a
 - **Responsive Layout**: Fully responsive design that works seamlessly on desktop, tablet, and mobile.
 - **Experience Timeline**: Dedicated section highlighting professional experience (e.g., KPIT Technologies).
 - **Interactive Elements**:
-  - Dynamic role text animation (Associate Systems Engineer / Software Engineer / Data Engineer).
+  - Dynamic role text animation (Software Engineer / Data Engineer).
   - Mobile navigation toggle.
   - Reveal-on-scroll animations.
   - Hover effects on project cards and skills.
@@ -42,7 +42,7 @@ A premium, responsive portfolio website designed for **Aditya Narayan Sahoo**, a
 **Aditya Narayan Sahoo**
 
 - **Email**: [adityasahoo246@gmail.com](mailto:adityasahoo246@gmail.com)
-- **Role**: Associate Systems Engineer
+- **Role**: Software Engineer
 - **Focus**: Building scalable, user-centric interfaces, data pipelines (ETL), and robust automation solutions.
 
 ## 📄 Sections
