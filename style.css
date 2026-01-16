@@ -4,7 +4,7 @@
 */
 
 :root {
-  /* Colors */
+  /* Dark Theme Default */
   --bg-dark: #0a0a0a;
   --bg-card: rgba(255, 255, 255, 0.03);
   --bg-card-hover: rgba(255, 255, 255, 0.07);
@@ -13,6 +13,7 @@
   --accent-primary: #3b82f6;
   --accent-glow: rgba(59, 130, 246, 0.5);
   --border-light: rgba(255, 255, 255, 0.1);
+  --nav-bg: rgba(10, 10, 10, 0.8);
 
   /* Typography */
   --font-main: 'Inter', system-ui, -apple-system, sans-serif;
@@ -21,6 +22,21 @@
   /* Spacing */
   --container-width: 1200px;
   --header-height: 80px;
+}
+
+[data-theme="light"] {
+  --bg-dark: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f1f5f9;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --accent-primary: #2563eb;
+  --accent-glow: rgba(37, 99, 235, 0.2);
+  --border-light: rgba(0, 0, 0, 0.1);
+  --nav-bg: rgba(255, 255, 255, 0.95);
+  /* Header specific overrides for light mode */
+  --header-bg-light: rgba(40, 40, 40, 0.95);
+  --header-text-light: #ffffff;
 }
 
 *,
@@ -42,6 +58,7 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Typography */
@@ -146,9 +163,30 @@ header {
   width: 100%;
   z-index: 1000;
   transition: all 0.3s ease;
-  background: rgba(10, 10, 10, 0.8);
+  background: var(--nav-bg);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border-light);
+}
+
+[data-theme="light"] header {
+  background: var(--header-bg-light);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="light"] header .logo {
+  color: #ffffff;
+  /* Bright white for logo */
+}
+
+[data-theme="light"] header .nav-links a,
+[data-theme="light"] header .theme-toggle-btn {
+  color: var(--header-text-light);
+}
+
+[data-theme="light"] .nav-links a:hover,
+[data-theme="light"] .nav-links a.active {
+  color: #3b82f6;
+  /* Accent color remains visible */
 }
 
 nav {
@@ -177,6 +215,33 @@ nav {
 .nav-links a:hover,
 .nav-links a.active {
   color: var(--text-primary);
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="light"] .theme-toggle-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
 }
 
 /* Use a simple hamburger for mobile (hidden on desktop) */
@@ -247,7 +312,8 @@ nav {
   border-radius: 16px;
   padding: 2rem;
   margin-bottom: 2rem;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .experience-card:hover {
@@ -407,9 +473,12 @@ footer {
     background: var(--bg-dark);
     flex-direction: column;
     padding: 2rem;
-    border-bottom: 1px solid var(--border-light);
-    transform: translateY(-150%);
     transition: transform 0.3s ease;
+  }
+
+  [data-theme="light"] .nav-right {
+    background: var(--header-bg-light);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .nav-links.active {

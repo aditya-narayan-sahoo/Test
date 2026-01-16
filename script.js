@@ -1,20 +1,51 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
+
+    // Theme Switcher Logic
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const sunIcon = document.getElementById('sun-icon');
+    const moonIcon = document.getElementById('moon-icon');
+
+    // Check local storage or system preference
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+        sunIcon.style.display = 'block';
+        moonIcon.style.display = 'none';
+    }
+
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+            const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+
+            if (isLight) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                sunIcon.style.display = 'none';
+                moonIcon.style.display = 'block';
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+                sunIcon.style.display = 'block';
+                moonIcon.style.display = 'none';
+            }
+        });
+    }
+
     // Mobile Navigation Toggle
     const mobileMenuBtn = document.getElementById('mobile-menu');
-    const navLinks = document.querySelector('.nav-links');
+    const navRight = document.querySelector('.nav-right');
 
     if (mobileMenuBtn) {
         mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? '✕' : '☰';
+            navRight.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navRight.classList.contains('active') ? '✕' : '☰';
         });
     }
 
     // Close mobile menu when clicking a link
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
+            navRight.classList.remove('active');
             mobileMenuBtn.innerHTML = '☰';
         });
     });
@@ -59,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Dynamic Text Animation
     const dynamicText = document.getElementById('dynamic-role');
     if (dynamicText) {
-        const roles = ["Software Engineer", "Data Engineer", "Associate Systems Engineer"];
+        const roles = ["Software Engineer", "Data Engineer",];
         let roleIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
@@ -67,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function type() {
             const currentRole = roles[roleIndex];
-            
+
             if (isDeleting) {
                 dynamicText.textContent = currentRole.substring(0, charIndex - 1);
                 charIndex--;

@@ -24,17 +24,43 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo">A.N.$</div>
+                <a href="/" class="logo" style="text-decoration: none;">A.N.$</a>
                 <div class="menu-toggle" id="mobile-menu">
                     <span>☰</span>
                 </div>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Work</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+
+                <div class="nav-right">
+                    <ul class="nav-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#projects">Work</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" aria-label="Toggle Dark Mode" class="theme-toggle-btn">
+                        <!-- Sun Icon (hidden in dark mode) -->
+                        <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" style="display: none;">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <!-- Moon Icon (visible in dark mode) -->
+                        <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+                </div>
             </nav>
         </div>
     </header>
@@ -51,7 +77,8 @@
                     <h1>Aditya Narayan Sahoo</h1>
                     <p class="role"
                         style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--accent-primary); min-height: 1.5em;">
-                        <span id="dynamic-role">Associate Systems Engineer</span><span class="cursor">|</span></p>
+                        <span id="dynamic-role">Associate Systems Engineer</span><span class="cursor">|</span>
+                    </p>
                     <p>Building scalable, user-centric interfaces and robust automation solutions. UI/UX Enthusiast.</p>
                     <div class="hero-buttons">
                         <a href="#projects" class="btn btn-primary">View My Work</a>
