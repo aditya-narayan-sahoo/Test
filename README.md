@@ -2,6 +2,10 @@
 
 A premium, responsive portfolio website designed for **Aditya Narayan Sahoo**, a Software Engineer. This site showcases professional experience, technical skills, and featured projects using a modern dark-themed aesthetic with glassmorphism effects.
 
+## 🌐 Live Demo
+
+The project is deployed on GitHub Pages. Check out the live version here: [https://aditya-narayan-sahoo.github.io/Test/](https://aditya-narayan-sahoo.github.io/Test/)
+
 ## 🚀 Features
 
 - **Modern UI/UX**: Dark mode design with glassmorphism cards and smooth animations.
