@@ -53,20 +53,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Mobile Navigation Toggle
     const mobileMenuBtn = document.getElementById('mobile-menu');
-    const navRight = document.querySelector('.nav-right');
+    const navLinks = document.querySelector('.nav-links');
 
-    if (mobileMenuBtn) {
-        mobileMenuBtn.addEventListener('click', () => {
-            navRight.classList.toggle('active');
-            mobileMenuBtn.innerHTML = navRight.classList.contains('active') ? '✕' : '☰';
+    if (mobileMenuBtn && navLinks) {
+        mobileMenuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? '✕' : '☰';
+        });
+
+        // Close menu when clicking on the menu background (not on the links themselves)
+        navLinks.addEventListener('click', (e) => {
+            // Only close if clicking directly on the nav-links container, not on child elements
+            if (e.target === navLinks) {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '☰';
+            }
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (navLinks.classList.contains('active') &&
+                !navLinks.contains(e.target) &&
+                !mobileMenuBtn.contains(e.target)) {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '☰';
+            }
         });
     }
 
     // Close mobile menu when clicking a link
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
-            navRight.classList.remove('active');
-            mobileMenuBtn.innerHTML = '☰';
+            if (navLinks) {
+                navLinks.classList.remove('active');
+            }
+            if (mobileMenuBtn) {
+                mobileMenuBtn.innerHTML = '☰';
+            }
         });
     });
 
@@ -122,32 +146,32 @@ document.addEventListener('DOMContentLoaded', () => {
     // Dynamic Text Animation
     const dynamicText = document.getElementById('dynamic-role');
     if (dynamicText) {
-        const roles = ["Software Engineer", "Data Engineer",];
-        let roleIndex = 0;
+        const prefixes = ["Software", "Data"];
+        let prefixIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
         let typeSpeed = 100;
 
         function type() {
-            const currentRole = roles[roleIndex];
+            const currentPrefix = prefixes[prefixIndex];
 
             if (isDeleting) {
-                dynamicText.textContent = currentRole.substring(0, charIndex - 1);
+                dynamicText.textContent = currentPrefix.substring(0, charIndex - 1);
                 charIndex--;
-                typeSpeed = 50; // Newer texts delete faster
+                typeSpeed = 50; // Delete faster
             } else {
-                dynamicText.textContent = currentRole.substring(0, charIndex + 1);
+                dynamicText.textContent = currentPrefix.substring(0, charIndex + 1);
                 charIndex++;
                 typeSpeed = 100; // Normal typing speed
             }
 
-            if (!isDeleting && charIndex === currentRole.length) {
-                // Determine pause at end of word
+            if (!isDeleting && charIndex === currentPrefix.length) {
+                // Pause at end of word
                 isDeleting = true;
                 typeSpeed = 2000;
             } else if (isDeleting && charIndex === 0) {
                 isDeleting = false;
-                roleIndex = (roleIndex + 1) % roles.length;
+                prefixIndex = (prefixIndex + 1) % prefixes.length;
                 typeSpeed = 500;
             }
 

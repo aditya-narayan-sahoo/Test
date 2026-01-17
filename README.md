@@ -8,30 +8,39 @@ The project is deployed on GitHub Pages. Check out the live version here: [https
 
 ## 🚀 Features
 
-- **Modern UI/UX**: Dark mode design with glassmorphism cards and smooth animations.
+- **Modern UI/UX**: Premium design with both light and dark themes, glassmorphism cards, and smooth animations.
+- **Theme Toggle**: Seamless light/dark mode switcher with instant theme updates and persistent preference storage.
 - **Responsive Layout**: Fully responsive design that works seamlessly on desktop, tablet, and mobile.
-- **Experience Timeline**: Dedicated section highlighting professional experience (e.g., KPIT Technologies).
+- **Enhanced Mobile Navigation**: 
+  - Collapsible hamburger menu with smooth overlay animation.
+  - Click-outside-to-close functionality.
+  - Auto-close on navigation link selection.
+- **Experience Timeline**: Dedicated section highlighting professional experience (IBM, KPIT Technologies).
 - **Interactive Elements**:
-  - Dynamic role text animation (Software Engineer / Data Engineer).
-  - Mobile navigation toggle.
+  - Dynamic role prefix animation (Software/Data Engineer with static "Engineer" suffix).
   - Reveal-on-scroll animations.
   - Hover effects on project cards and skills.
-- **Digital Credentials**: showcase of verified professional certifications.
+  - Scroll-aware navbar with enhanced shadows.
+- **Digital Credentials**: Showcase of verified professional certifications.
 - **SEO Friendly**: Semantic HTML5 structure with optimized meta tags.
 
 ## 🛠️ Technologies Used
 
-- **HTML5**: Semantic structure.
-- **CSS3**: Custom properties (variables), Flexbox, Grid, and Animations.
-- **JavaScript (ES6+)**: DOM manipulation and Intersection Observer API for scroll effects.
+- **HTML5**: Semantic structure with accessibility features.
+- **CSS3**: Custom properties (CSS variables), Flexbox, Grid, Animations, and responsive media queries.
+- **JavaScript (ES6+)**: 
+  - Theme management with localStorage persistence.
+  - Mobile menu toggle with click-outside detection.
+  - Intersection Observer API for scroll-triggered animations.
+  - Dynamic typing animation with prefix rotation.
 - **Fonts**: Inter and Outfit (via Google Fonts).
 
 ## 📂 Project Structure
 
 ```
 ├── index.html    # Main HTML structure
-├── style.css     # Global styles, variables, and responsive design
-├── script.js     # Functionality (Mobile menu, Scroll animations)
+├── style.css     # Global styles, theme variables, and responsive design
+├── script.js     # Functionality (Theme toggle, Mobile menu, Scroll animations, Typing effect)
 └── README.md     # Project documentation
 ```
 
@@ -52,7 +61,7 @@ The project is deployed on GitHub Pages. Check out the live version here: [https
 ## 📄 Sections
 
 
-1.  **Hero**: Introduction with dynamic role animation and CTA.
+1.  **Hero**: Introduction with dynamic role prefix animation (Software/Data) and CTA buttons.
 2.  **About**: Professional profile and bio.
 3.  **Experience**: Professional timeline (IBM, KPIT Technologies).
 4.  **Education**: Academic background (B.Tech, Senior Secondary).
