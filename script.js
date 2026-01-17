@@ -16,17 +16,37 @@ document.addEventListener('DOMContentLoaded', () => {
     if (themeToggleBtn) {
         themeToggleBtn.addEventListener('click', () => {
             const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+            const header = document.querySelector('header');
+            const scrolled = window.scrollY > 50;
 
             if (isLight) {
                 document.documentElement.setAttribute('data-theme', 'dark');
                 localStorage.setItem('theme', 'dark');
                 sunIcon.style.display = 'none';
                 moonIcon.style.display = 'block';
+
+                // Update navbar for dark mode
+                if (scrolled) {
+                    header.style.background = 'rgba(10, 10, 10, 0.95)';
+                    header.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.3)';
+                } else {
+                    header.style.background = 'rgba(10, 10, 10, 0.8)';
+                    header.style.boxShadow = 'none';
+                }
             } else {
                 document.documentElement.setAttribute('data-theme', 'light');
                 localStorage.setItem('theme', 'light');
                 sunIcon.style.display = 'block';
                 moonIcon.style.display = 'none';
+
+                // Update navbar for light mode
+                if (scrolled) {
+                    header.style.background = 'rgba(248, 250, 252, 0.98)';
+                    header.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.1)';
+                } else {
+                    header.style.background = 'rgba(248, 250, 252, 0.95)';
+                    header.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.08)';
+                }
             }
         });
     }
@@ -78,12 +98,24 @@ document.addEventListener('DOMContentLoaded', () => {
     // Header scroll effect
     const header = document.querySelector('header');
     window.addEventListener('scroll', () => {
+        const isLightMode = document.documentElement.getAttribute('data-theme') === 'light';
+
         if (window.scrollY > 50) {
-            header.style.background = 'rgba(10, 10, 10, 0.9)';
-            header.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.1)';
+            if (isLightMode) {
+                header.style.background = 'rgba(248, 250, 252, 0.98)';
+                header.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.background = 'rgba(10, 10, 10, 0.95)';
+                header.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.3)';
+            }
         } else {
-            header.style.background = 'rgba(10, 10, 10, 0.8)';
-            header.style.boxShadow = 'none';
+            if (isLightMode) {
+                header.style.background = 'rgba(248, 250, 252, 0.95)';
+                header.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.08)';
+            } else {
+                header.style.background = 'rgba(10, 10, 10, 0.8)';
+                header.style.boxShadow = 'none';
+            }
         }
     });
 

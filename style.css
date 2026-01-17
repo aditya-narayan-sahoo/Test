@@ -34,9 +34,6 @@
   --accent-glow: rgba(37, 99, 235, 0.2);
   --border-light: rgba(0, 0, 0, 0.1);
   --nav-bg: rgba(255, 255, 255, 0.95);
-  /* Header specific overrides for light mode */
-  --header-bg-light: rgba(40, 40, 40, 0.95);
-  --header-text-light: #ffffff;
 }
 
 *,
@@ -169,25 +166,39 @@ header {
 }
 
 [data-theme="light"] header {
-  background: var(--header-bg-light);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(248, 250, 252, 0.95);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-[data-theme="light"] header .logo {
-  color: #ffffff;
-  /* Bright white for logo */
+[data-theme="light"] .logo {
+  color: var(--text-primary);
+  font-weight: 700;
 }
 
-[data-theme="light"] header .nav-links a,
-[data-theme="light"] header .theme-toggle-btn {
-  color: var(--header-text-light);
+[data-theme="light"] .nav-links a {
+  color: var(--text-secondary);
+  font-weight: 500;
 }
 
 [data-theme="light"] .nav-links a:hover,
 [data-theme="light"] .nav-links a.active {
-  color: #3b82f6;
-  /* Accent color remains visible */
+  color: var(--accent-primary);
 }
+
+[data-theme="light"] .theme-toggle-btn {
+  color: var(--text-primary);
+}
+
+[data-theme="light"] .theme-toggle-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .menu-toggle {
+  color: var(--text-primary);
+}
+
+
 
 nav {
   display: flex;
@@ -209,12 +220,13 @@ nav {
 
 .nav-links a {
   font-size: 0.95rem;
-  color: var(--text-secondary);
+  color: var(--text-primary);
+  font-weight: 500;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: var(--text-primary);
+  color: var(--accent-primary);
 }
 
 .nav-right {
@@ -470,15 +482,14 @@ footer {
     top: var(--header-height);
     left: 0;
     width: 100%;
-    background: var(--bg-dark);
+    background: var(--nav-bg);
+    backdrop-filter: blur(20px);
     flex-direction: column;
     padding: 2rem;
+    gap: 1rem;
     transition: transform 0.3s ease;
-  }
-
-  [data-theme="light"] .nav-right {
-    background: var(--header-bg-light);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--border-light);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   }
 
   .nav-links.active {
